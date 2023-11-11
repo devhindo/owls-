@@ -7,11 +7,19 @@ import (
 )
 
 func Init() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-	  c.JSON(http.StatusOK, gin.H{
-		"message": "pong",
-	  })
+
+	router := gin.Default()
+
+	router.LoadHTMLGlob("views/html/*")
+	router.Static("/views/css", "./css")
+
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.tmpl", nil)
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+
+	router.GET("/chat", func(c *gin.Context) {
+        c.String(200, "Welcome to the chat!")
+    })
+
+	router.Run(":8080")
 }
