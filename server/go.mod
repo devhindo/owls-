@@ -1,4 +1,4 @@
-module github.com/devhindo/owls
+module github.com/devhindo/owls/server
 
 go 1.21
 
