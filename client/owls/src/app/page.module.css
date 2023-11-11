@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.chat {
+    border: 1px solid #ccc;
+    width: 30%;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat:hover {
+    background-color: #ddd;
+    color: black;
+}
+
