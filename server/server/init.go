@@ -10,8 +10,6 @@ func Init() {
 
 	router := gin.Default()
 
-	router.LoadHTMLGlob("views/html/*")
-
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Hello, world!",
